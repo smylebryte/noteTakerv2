@@ -2,6 +2,7 @@ const express = require('express');
 const router = require('express').Router();
 const db = require('../db/db');
 const fs = require('fs');
+const { uuid } = require('uuidv4');
 
 router.get('/api/notes', (req, res) => {
   fs.readFile('./db/db.json', (err, data) => {
@@ -11,6 +12,9 @@ router.get('/api/notes', (req, res) => {
 
 router.post('/api/notes', (req, res) => {
   const newNote = req.body;
+  fs.writeFile('./db/db.json', function (err, newNote) {
+    console.log('you did it!');
+  });
 });
 
 router.delete('/api/notes/:id', (req, res) => {
@@ -27,10 +31,4 @@ module.exports = router;
 //   notesDB.getNotes();
 
 //   return res.json(notes);
-// });
-
-// router.get("/", (req, res) => {
-//   let existingNotes = JSON.parse(fs.readFileSync("./db/db.json", "utf-8"));
-
-//   res.json(existingNotes);
 // });
