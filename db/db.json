@@ -1,14 +1,1 @@
-[
-  {
-    "title": "Test Title",
-    "text": "Test text"
-  },
-  {
-    "title": "New Note",
-    "text": "Text of new note"
-  },
-  {
-    "title": "3rd Note",
-    "text": "3rd note text"
-  }
-]
+[{"title":"New note","text":"new note","id":"d1k9173jykkpsl7b3m"},{"title":"3rd new note","text":"3rd new note","id":"d1k9173k38kpslvsow"},{"title":"5th new note","text":"5th new note","id":"d1k9173k38kpslw8kc"}]
